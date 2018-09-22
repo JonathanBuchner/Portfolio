@@ -1,0 +1,24 @@
+.project-container {
+    background: transparent;
+}
+
+.project-container > div {
+    position: relative;
+    display: inline-block;
+    width: 900px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding: 0 0 0 40px;
+    background: rgba(0,0,0,.65);
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,.65);
+}
+
+.project-container .project {
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.project-container img {
+    width: 250px;
+}

@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    color: gray;
+}
+
+/* Routing animation requires absolute display block */
+.page-container {
+    position: absolute;
+    display: block;
+    margin: 100px 100px;
+}
+
+/* Text */
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.heading-text {
+    text-transform: uppercase;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px; 
+}
+
+.title {
+    font-weight: 700;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sub-title {
+    margin: 0;
+    text-shadow: 0 0 8px black;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgb(120,120,120);
+    line-height: 1;
+    letter-spacing: 1px;
+}
