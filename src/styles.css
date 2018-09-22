@@ -1,5 +1,5 @@
 body{
-    color: gray;
+    color: white;
 }
 
 /* Routing animation requires absolute display block */
@@ -24,7 +24,7 @@ a {
 
 .title {
     font-weight: 700;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -32,10 +32,9 @@ a {
 .sub-title {
     margin: 0;
     text-shadow: 0 0 8px black;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Montserrat", "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     color: rgb(120,120,120);
-    line-height: 1;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }

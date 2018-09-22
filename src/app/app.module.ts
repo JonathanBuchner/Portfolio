@@ -9,7 +9,9 @@ import { BackgroundComponent } from './background/background.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { VideoBackgroundDirective } from './directives/video-background.directive';
-import { RoutingModule } from './routing.module';
+import { RoutingModule } from './routing/routing.module';
+import { ProjectmodalComponent } from './projects/projectmodal/projectmodal.component';
+import { VideoProjectmodalDirective } from './directives/video-projectmodal.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { RoutingModule } from './routing.module';
     ProjectsComponent,
     PagenotfoundComponent,
     VideoBackgroundDirective,
+    ProjectmodalComponent,
+    VideoProjectmodalDirective,
   ],
   imports: [
     BrowserModule,

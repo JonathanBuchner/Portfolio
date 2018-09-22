@@ -1,0 +1,35 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.96);
+    
+    z-index: 100;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 900;
+    background:white; /* Old browsers */
+    box-shadow: 0 0 8px 3px black;
+
+    transform: translate(-50%, -50%);
+}
+
+h2.title {
+    color: orange;
+    text-align: center;
+}
+
+.controls {
+    color: blue;
+    cursor: pointer;
+}
+
+video {
+    height: 300px;
+}
