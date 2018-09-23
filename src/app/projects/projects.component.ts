@@ -7,8 +7,8 @@ import { PROFESSIONALPROJECTS, PERSONALPROJECTS } from '../data/PROJECTS';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  private professionalProjects = PROFESSIONALPROJECTS
-  private personalProjects = PERSONALPROJECTS
+  private professionalProjects = PROFESSIONALPROJECTS;
+  private personalProjects = PERSONALPROJECTS;
 
   constructor() { }
 

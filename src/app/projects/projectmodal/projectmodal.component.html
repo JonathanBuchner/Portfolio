@@ -2,9 +2,11 @@
   <div class="container">
     <h2 class="title">Project Names</h2>
     <div class="controls">
-      <i class="fas fa-play-circle"></i>
+      <i (click)="playPause()" [ngClass]="playing ? 'fas fa-pause-circle' : 'fas fa-play-circle' " class=""></i>
+      <input #videoSlider type="range" min="0" max="{{duration}}" value="{{currentTime}}" class="slider">
+      <span *ngIf="loaded">{{currentTime | timer }} / {{duration | timer }}</span>
     </div>
-    <video video-project-modal src="../../../assets/vid/player.mp4" controls></video>
+    <video #videoPlayer src="../../../assets/vid/player.mp4" controls></video>
     <p>Description</p>
   </div>
 </div>

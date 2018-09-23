@@ -1,31 +1,50 @@
-import { Directive, OnInit, ElementRef } from '@angular/core';
+import { Directive, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Directive({
-  selector: '[video-project-modal]'
+  selector: '[video-project]',
 })
 
 export class VideoProjectmodalDirective implements OnInit {
   private video: HTMLMediaElement;
-  private play: HTMLElement;
   private playing = false;
 
-  constructor( 
-      private videoRef: ElementRef,
-      private playRef: ElementRef
-    ) { 
+  constructor(private videoRef: ElementRef) { 
     this.video = videoRef.nativeElement;
-    this.play = playRef.nativeElement;
   }
 
   ngOnInit() {}
 
-  ngAfterViewInit(){
-    this.addEventListenerPlay
+  ngAfterViewInit() {
+    this.video = this.videoRef.nativeElement;
+    this.addEventListenerPlay();
+    this.addEventListenerPause();
   }
 
+  //Observables
+  getPlayPauseState(): Observable<boolean> {
+    return of (this.playing);
+  }
+
+  //Play or Pause
+  playPause() {
+    if(this.playing) {
+      this.video.pause();
+    } else {
+      this.video.play();
+    }
+  }
+
+  // Event Listeners
   addEventListenerPlay() {
     this.video.addEventListener('play', () => {
+      this.playing = true;
+    });
+  }
 
+  addEventListenerPause() {
+    this.video.addEventListener('pause', () => {
+      this.playing = false;
     });
   }
 }

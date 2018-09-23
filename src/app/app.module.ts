@@ -12,6 +12,7 @@ import { VideoBackgroundDirective } from './directives/video-background.directiv
 import { RoutingModule } from './routing/routing.module';
 import { ProjectmodalComponent } from './projects/projectmodal/projectmodal.component';
 import { VideoProjectmodalDirective } from './directives/video-projectmodal.directive';
+import { TimerPipe } from './pipes/timer.pipe';
 
 @NgModule({
   declarations: [
@@ -24,14 +25,15 @@ import { VideoProjectmodalDirective } from './directives/video-projectmodal.dire
     VideoBackgroundDirective,
     ProjectmodalComponent,
     VideoProjectmodalDirective,
+    TimerPipe,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RoutingModule
   ],
-  exports: [],
-  providers: [],
+  exports: [ VideoProjectmodalDirective],
+  providers: [VideoProjectmodalDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,8 +5,9 @@ import { filter } from 'rxjs/operators';
 @Directive({
   selector: '[video-background]'
 })
+
 export class VideoBackgroundDirective implements OnInit {
-  private video: HTMLMediaElement
+  private video: HTMLMediaElement;
   private timeout: any;
 
   constructor(private elRef: ElementRef, public router: Router) { 
