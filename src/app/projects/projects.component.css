@@ -9,14 +9,19 @@
     margin-right: 40px;
     margin-bottom: 40px;
     padding: 0 0 0 40px;
-    background: rgba(0,0,0,.65);
+    background: rgba(0,0,0,.75);
     box-shadow: 2px 2px 3px 1px rgba(0,0,0,.65);
+}
+
+p {
+    font-size: 1.2em;
 }
 
 .project-container .project {
     display: inline-block;
     margin-right: 40px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .project-container img {

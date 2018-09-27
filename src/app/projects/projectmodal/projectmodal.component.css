@@ -38,10 +38,42 @@
 
 .video {
     grid-area: video;
+    height: 100%;
 }
 
-.footer {
-    grid-area: footer;
+.video > div {
+    position: relative;
+    transition: opacity .5s linear;
+}
+
+.video .hide {
+    opacity: 0;
+}
+
+.video .show {
+    opacity: 1;
+}
+
+video {
+    width: 100%;
+    border-radius: 4px;    
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+
+    transform: translate(-50%, -50%);
+}
+
+.loading.hide {
+    display: none;
+}
+
+.loading i {
+    font-size: 3em;
 }
 
 .title-block {
@@ -61,13 +93,34 @@ div.title {
     text-align: center;
 }
 
-.description {
+.grid div.description {
     grid-area: description;
+    margin-bottom: 10px;
     border-radius: 4px;    
     padding: 30px;
     background:white; 
     box-shadow: 0 0 8px 3px black;
     color: rgb(40,40,40);
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.close {
+    padding: 2px 8px;
+    border-bottom: transparent solid 1px;
+    font-family: Segoe UI,SegoeUI,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+}
+
+.close:hover {
+    border-color: white;
 }
 
 .controls {
@@ -80,10 +133,9 @@ div.title {
     position: relative;
     width: 315px;
     left: 50%;
-
+    
     transform: translateX(-50%);
 }
-
 
 .slider {
     -webkit-appearance: none;  
@@ -95,8 +147,9 @@ div.title {
     background: rgb(250,250,250);
     box-shadow: 0 0 2px 0; 
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    transition: opacity .4s;
     cursor: pointer;
+    
+    transition: opacity .4s;
 }
 
 .slider:hover {
@@ -161,11 +214,16 @@ div.title {
 }
 
 .playbtn {
+    margin-top: 8px;
     cursor: pointer;
     font-size: 1.5em;
+    color: rgb(250,250,250);
+    opacity: .7;
+
+    transition: opacity .4s;
 }
 
-video {
-    width: 100%;
-    border-radius: 4px;    
+.playbtn:hover {
+    opacity: 1;
 }
+
