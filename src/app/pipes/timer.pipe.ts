@@ -11,6 +11,7 @@ export class TimerPipe implements PipeTransform {
 
   changeSecondsToMMSS(time: number) {
     time = Math.floor(time);
+    console.log(time)
 
     if(time < 10) {
       return `0:0${time}`;

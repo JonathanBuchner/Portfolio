@@ -30,7 +30,7 @@ export class VideoBackgroundDirective implements OnInit {
     this.video.addEventListener('play', () => {
       this.timeout = setTimeout( ()=>{
         this.video.pause();
-      }, 2000);
+      }, 1500);
     });
   }
 

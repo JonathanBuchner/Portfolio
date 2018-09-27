@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { VideoProjectmodalDirective } from '../../directives/video-projectmodal.directive';
 
 @Component({
@@ -9,13 +9,18 @@ import { VideoProjectmodalDirective } from '../../directives/video-projectmodal.
 export class ProjectmodalComponent implements OnInit {
   @ViewChild('videoPlayer') videoRef: ElementRef;
   @ViewChild('videoSlider') sliderRef: ElementRef;
+  @ViewChild('hoverTime') hoverRef: ElementRef;
 
   playing = false;
   loaded = false;
+  displayTime = false;
+  updateSlider = true;
   video: HTMLMediaElement;
   slider: HTMLInputElement;
+  hover: HTMLElement;
   duration: number;
   currentTime: number = 0;
+  devmode = true;
   
 
   constructor() {}
@@ -25,10 +30,23 @@ export class ProjectmodalComponent implements OnInit {
   ngAfterViewInit() {
     this.video = this.videoRef.nativeElement;
     this.slider = this.sliderRef.nativeElement;
+    this.hover = this.hoverRef.nativeElement;
     this.addEventListenerPlay();
     this.addEventListenerPause();
     this.addEventListenerLoadedmetadata();
     this.addEventListenerTimeupdate();
+  }
+  //slider change time
+  updateTime(time: number): void {
+     this.video.currentTime = time;
+     this.currentTime = time;
+     this.moveHover();
+  }
+
+  moveHover(): void {
+    let moveDistance = Math.floor(this.currentTime * 300 / this.duration);
+    this.hover.style.left =  moveDistance.toString()+'px';
+    console.log(moveDistance+'px');
   }
 
   //Play or Pause
@@ -55,15 +73,15 @@ export class ProjectmodalComponent implements OnInit {
 
   addEventListenerLoadedmetadata() {
     this.video.addEventListener('loadedmetadata', () => {
-     this.duration = this.video.duration;
-     this.loaded = true;
+    this.duration = this.video.duration;
+    this.loaded = true;
 
     });
   }
 
   addEventListenerTimeupdate() {
     this.video.addEventListener('timeupdate', () => {
-     this.currentTime = this.video.currentTime;
+      if (this.updateSlider) this.currentTime = this.video.currentTime;
     });
   }
 }
