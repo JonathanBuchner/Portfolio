@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PROFESSIONALPROJECTS, PERSONALPROJECTS } from '../data/PROJECTS';
+import { Project } from '../models/Project';
 
 @Component({
   selector: 'app-projects',
@@ -7,12 +8,17 @@ import { PROFESSIONALPROJECTS, PERSONALPROJECTS } from '../data/PROJECTS';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  private professionalProjects = PROFESSIONALPROJECTS;
-  private personalProjects = PERSONALPROJECTS;
+  professionalProjects = PROFESSIONALPROJECTS;
+  personalProjects = PERSONALPROJECTS;
+  selectedProject : Project = null;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  selectProject(project: Project): void {
+    this.selectedProject = project;
+  console.log(this.selectedProject);
+  }
 }

@@ -2,17 +2,21 @@
 <div class="page-container project-container">
   <div>
     <h3 class="title">Professional</h3>
-    <span class="project" *ngFor="let project of professionalProjects">
+    <span class="project" *ngFor="let project of professionalProjects" (click)="selectProject(project)">
       <h4 id ="{{project.elementId}}" class="sub-title">{{project.title}}</h4>
       <img src="{{project.src}}" />
     </span>
   </div>
   <div>
     <h3 class="title">Personal</h3>
-    <span class="project" *ngFor="let project of personalProjects">
+    <span class="project" *ngFor="let project of personalProjects" (click)="selectProject(project)">
         <h4 id ="{{project.elementId}}" class="sub-title">{{project.title}}</h4>
         <img src="{{project.src}}" />
       </span>
   </div>
 </div>
-<app-projectmodal></app-projectmodal>
+<app-projectmodal  
+  *ngIf="selectedProject" 
+  [project]="selectedProject"
+  (close)="selectedProject = null">  
+</app-projectmodal>

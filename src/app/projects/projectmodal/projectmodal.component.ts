@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, HostListener, Output, EventEmitter } from '@angular/core';
 import { VideoProjectmodalDirective } from '../../directives/video-projectmodal.directive';
+import { Project } from '../../models/Project';
 
 @Component({
   selector: 'app-projectmodal',
@@ -7,10 +8,19 @@ import { VideoProjectmodalDirective } from '../../directives/video-projectmodal.
   styleUrls: ['./projectmodal.component.css']
 })
 export class ProjectmodalComponent implements OnInit {
-  @ViewChild('videoPlayer') videoRef: ElementRef;
-  @ViewChild('videoSlider') sliderRef: ElementRef;
-  @ViewChild('hoverTime') hoverRef: ElementRef;
+  @ViewChild('videoPlayer') set videoRef (videoRef: ElementRef) {
+    this.video = videoRef.nativeElement;
+  }
+  @ViewChild('videoSlider') set sliderRef (sliderRef: ElementRef) {
+    this.slider = sliderRef.nativeElement;
+  }
+  @ViewChild('hoverTime') set hoverRef (hoverRef: ElementRef) {
+    this.hover = hoverRef.nativeElement;
+  }
 
+  @Input() project : Project;
+  @Output() close: EventEmitter<boolean> = new EventEmitter<boolean>();
+  active = false;
   playing = false;
   loaded = false;
   displayTime = false;
@@ -20,22 +30,24 @@ export class ProjectmodalComponent implements OnInit {
   hover: HTMLElement;
   duration: number;
   currentTime: number = 0;
-  devmode = true;
+  devmode = false;
   
-
   constructor() {}
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.video = this.videoRef.nativeElement;
-    this.slider = this.sliderRef.nativeElement;
-    this.hover = this.hoverRef.nativeElement;
     this.addEventListenerPlay();
     this.addEventListenerPause();
     this.addEventListenerLoadedmetadata();
     this.addEventListenerTimeupdate();
   }
+  //close
+  closeModal() {
+    this.close.emit(false);
+    console.log('close');
+  }
+
   //slider change time
   updateTime(time: number): void {
      this.video.currentTime = time;
