@@ -2,7 +2,7 @@
     <video video-background src="../../assets/vid/womantyping.mp4" autoplay loop></video>
     <div class="cover"></div>
 </div>
-<div class="navigation heading-text">
+<div class="navigation heading-text" [ngClass]="atTop ? 'at-top' : 'not-at-top' ">
   <nav>
     <span class="name">Jonathan Buchner</span>
     <a routerLink="/Projects" routerLinkActive="active">Projects</a>

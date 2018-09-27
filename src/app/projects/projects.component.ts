@@ -19,6 +19,5 @@ export class ProjectsComponent implements OnInit {
 
   selectProject(project: Project): void {
     this.selectedProject = project;
-  console.log(this.selectedProject);
   }
 }

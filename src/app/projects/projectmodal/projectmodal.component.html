@@ -1,21 +1,40 @@
 <div [ngClass]="project ? 'show' : 'hide' " class="background">
   <div class="container">
     <div class="grid">
+      
+      <!-- TITLE -->
       <div class="title-block">
         <div class="title">{{project.title}}</div>
       </div>
+      
+      <!-- VIDEO -->
       <div class="video">
           <div class="loading" [ngClass]="loaded ? 'hide' : 'show' "><i class="fas fa-spinner fa-spin"></i></div>
         <div [ngClass]="loaded ? 'show' : 'hide' ">
-          <video #videoPlayer src="../../../assets/vid/player.mp4"></video>
+          <video #videoPlayer src="{{project.videosrc}}"></video>
         </div>
       </div>
-      <div class="description">The standard Lorem Ipsum passage, used since the 1500s
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      
+      <!-- DESCRIPTION -->
+      <div class="description">
+        <div class="highlights">{{project.highlights}}</div>
+        <div class="message">{{project.description}}</div>
+        <div class="playbtncontainer">
+          <i (click)="playPause()" [ngClass]="playing ? 'fas fa-pause-circle' : 'fas fa-play-circle' " class="playbtn"> </i>
+        </div>
+        <div class="timestamps">
+          <div *ngFor="let stamp of project.timestamps" (click)="updateTime(stamp.time)" [ngClass]="currentTime >= stamp.time ? 'activated' : 'deactivated' ">
+            <span class="stamptime">[{{stamp.time | timer}}] </span> <span class="stamptime text"> {{stamp.description}} </span>
+          </div>
+        </div>
       </div>
+      
+      <!-- CLOSE -->
       <div class="footer">
         <span (click)="closeModal()" class="close">Close</span>
       </div>
+      
+      <!-- CONTROLS -->
       <div class="controls">
         <div class="sliderBar">
           <input #videoSlider type="range" min="0" [max]="duration" [value]="currentTime" class="slider" 
@@ -24,7 +43,7 @@
           (mouseup)="displayTime = false">
           <span #hoverTime class="time" [ngClass]="loaded && displayTime ? 'show' : 'hide' ">{{currentTime | timer }} / {{duration | timer }}</span>
         </div>
-        <i (click)="playPause()" [ngClass]="playing ? 'fas fa-pause-circle' : 'fas fa-play-circle' " class="playbtn"> </i>
+        <div class="currentTime">{{currentTime | timer }}</div>
       </div>
     </div>
   </div>

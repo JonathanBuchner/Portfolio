@@ -24,8 +24,19 @@
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     margin: 0;
     padding: 20px 40px;
+    border-bottom: transparent 2px solid;
+    background: transparent;
+
+    z-index: 100;
+    transition: background .2s, border .5s;
+}
+
+.not-at-top {
+    background: black;
+    border-color: white;
 }
 
 .name {
