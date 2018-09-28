@@ -55,10 +55,9 @@ export class ProjectmodalComponent implements OnInit {
      this.moveHover();
   }
 
-  moveHover(): void {
+  moveHover() {
     let moveDistance = Math.floor(this.currentTime * 300 / this.duration);
     this.hover.style.left =  moveDistance.toString()+'px';
-    console.log(moveDistance+'px');
   }
 
   //Play or Pause

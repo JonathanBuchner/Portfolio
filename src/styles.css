@@ -13,6 +13,14 @@ body{
     margin: 100px 100px;
 }
 
+@media (max-width: 900px) {
+    .page-container {
+        position: absolute;
+        display: block;
+        margin: 110px 10%;
+    }
+}
+
 /* Text */
 a {
     color: inherit;
