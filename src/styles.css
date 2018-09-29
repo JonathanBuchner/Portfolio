@@ -12,12 +12,22 @@ body{
     display: block;
     margin: 100px 100px;
 }
+
 .readable {
     padding: 5px 50px;
     background: white;
     border-radius: 10px;
     box-shadow: 2px 2px 3px 1px rgba(0,0,0,.65);
     color: rgb(40, 40, 40);
+}
+
+.project-container > div, .black-background {
+    position: relative;
+    width: 810px;
+    margin: 0 0 40px 0; /* For stacking */
+    padding: 5px 30px;
+    background: rgba(0,0,0,.75);
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,.65);
 }
 
 @media (max-width: 900px) {

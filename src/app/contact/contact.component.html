@@ -1,3 +1,14 @@
-<div class="page-container">contact works!</div>
+<div class="page-container">
+    <div class="black-background">
+        <h1 class="title">Thank you for visiting</h1>
+        <div class="btn-container">
+            <span class="btn"><i class="fas fa-phone-square"></i><span class="phone"></span></span>
+            <span class="btn" (click)="showMeEmail()"><i class="fas fa-envelope"></i> Email</span>
+        </div>
+        <div class="showEmail"> 
+            <span *ngIf="showEmail">me@jonathanbuchner.com</span>
+        </div>
+    </div>
+</div>
   
 
