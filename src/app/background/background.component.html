@@ -1,3 +1,15 @@
-<p>
-  background works!
-</p>
+<div class="page-container readable background-container">
+  <div>
+      <h1 class="title">Web Development Background</h1>
+      <div class="grid" *ngFor="let info of backgroundInformation">
+        <div>
+          <div class="subtitle">{{info.subtitle}}</div>  
+          <p>{{info.description}}</p>
+        </div>
+        <div>
+            <div class="img">
+              <img src="{{info.src}}" />
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,13 @@ body{
     display: block;
     margin: 100px 100px;
 }
+.readable {
+    padding: 5px 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,.65);
+    color: rgb(40, 40, 40);
+}
 
 @media (max-width: 900px) {
     .page-container {
@@ -38,7 +45,6 @@ a {
     font-weight: 700;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .sub-title {

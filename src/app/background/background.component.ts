@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BACKGROUNDINFORMATION } from '../data/BACKGROUNDINFORMATION';
 
 @Component({
   selector: 'app-background',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./background.component.css']
 })
 export class BackgroundComponent implements OnInit {
+  backgroundInformation = BACKGROUNDINFORMATION;
 
   constructor() { }
 

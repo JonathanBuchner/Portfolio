@@ -1,0 +1,29 @@
+.background-container > div {
+    width: 810px;
+}
+
+.grid {
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-columns: calc(80% - 40px) 20%;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.img {
+    position: relative;
+    top: 30%;
+    transform: translateY(-30%);
+}
+
+img {
+    width: 100%;
+}

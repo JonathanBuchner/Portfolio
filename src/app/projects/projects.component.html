@@ -7,10 +7,10 @@
     </div>
   <div>
     <h3 class="title">Professional</h3>
-    <span class="project" *ngFor="let project of professionalProjects" (click)="selectProject(project)">
+    <div class="project" *ngFor="let project of professionalProjects" (click)="selectProject(project)">
       <h4 id ="{{project.elementId}}" class="sub-title">{{project.title}}</h4>
       <img src="{{project.src}}" />
-    </span>
+    </div>
   </div>
   <div>
     <h3 class="title">Personal</h3>

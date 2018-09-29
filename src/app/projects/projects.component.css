@@ -4,22 +4,25 @@
 
 .project-container > div {
     position: relative;
-    display: inline-block;
-    width: 900px;
-    margin: 0 40px 40px 0; /* For stacking */
-    padding: 0 0 0 40px;
+    width: 810px;
+    margin: 0 0 40px 0; /* For stacking */
+    padding: 5px 30px;
     background: rgba(0,0,0,.75);
     box-shadow: 2px 2px 3px 1px rgba(0,0,0,.65);
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .project-container .project {
     display: inline-block;
-    margin: 0 40px 20px 0; /* For stacking */
+    margin: 0 30px 20px 0; /* For stacking */
     cursor: pointer;
+}
+
+.project-container .project:last-child {
+    margin: 0 0 20px 0; /* For stacking */
 }
 
 .project-container img {
