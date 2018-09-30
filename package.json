@@ -1,9 +1,12 @@
 {
   "name": "portfolio-project",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "engines" : { 
+    "node" : "8.12.0" 
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng build --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,6 +14,10 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.8.0",
+    "@angular/cli": "~6.2.3",
+    "@angular/compiler-cli": "^6.1.0",
+    "@angular/language-service": "^6.1.0",
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
@@ -23,13 +30,10 @@
     "@types/twilio": "0.0.10",
     "core-js": "^2.5.4",
     "rxjs": "~6.2.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "typescript": "~2.9.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.8.0",
-    "@angular/cli": "~6.2.3",
-    "@angular/compiler-cli": "^6.1.0",
-    "@angular/language-service": "^6.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
@@ -43,7 +47,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
-    "typescript": "~2.9.2"
+    "tslint": "~5.11.0"
   }
 }
