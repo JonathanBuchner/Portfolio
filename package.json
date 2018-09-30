@@ -2,7 +2,7 @@
   "name": "portfolio-project",
   "version": "1.0.0",
   "engines" : { 
-    "node" : "8.12.0" 
+    "node" : "8.11.1" 
   },
   "scripts": {
     "ng": "ng",
