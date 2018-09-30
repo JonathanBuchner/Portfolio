@@ -8,8 +8,8 @@
   "scripts": {
     "ng": "ng",
     "start": "node run azure-build",
-    "azure-build" : "npm install && ng build --prod",
-    "postinstall": "npm install && ng build --prod",
+    "azure-build" : "npm install",
+    "postinstall": "ng build --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
