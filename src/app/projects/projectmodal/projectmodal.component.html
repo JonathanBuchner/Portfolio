@@ -39,8 +39,8 @@
         <div class="sliderBar">
           <input #videoSlider type="range" min="0" [max]="duration" [value]="currentTime" class="slider" 
           (input)="updateTime($event.target.value)"
-          (mousedown)="displayTime = true"
-          (mouseup)="displayTime = false">
+          (mouseover)="displayTime = true"
+          (mouseleave)="displayTime = false">
           <span #hoverTime class="time" [ngClass]="loaded && displayTime ? 'show' : 'hide' ">{{currentTime | timer }} / {{duration | timer }}</span>
         </div>
         <div class="currentTime">{{currentTime | timer }}</div>

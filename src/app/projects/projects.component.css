@@ -18,6 +18,7 @@ p {
 
 .project-container img {
     width: 250px;
+    height: 140px;;
 }
 
 @media (max-width: 950px) {

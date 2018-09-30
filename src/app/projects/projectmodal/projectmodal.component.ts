@@ -94,6 +94,7 @@ export class ProjectmodalComponent implements OnInit {
   addEventListenerTimeupdate() {
     this.video.addEventListener('timeupdate', () => {
       if (this.updateSlider) this.currentTime = this.video.currentTime;
+      this.moveHover();
     });
   }
 }

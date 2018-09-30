@@ -14,6 +14,8 @@
   </div>
   <div>
     <h3 class="title">Personal</h3>
+    <h3 class="sub-title">Adding this section before October 5th.</h3>
+    <br><br>
     <span class="project" *ngFor="let project of personalProjects" (click)="selectProject(project)">
         <h4 id ="{{project.elementId}}" class="sub-title">{{project.title}}</h4>
         <img src="{{project.src}}" />

@@ -10,12 +10,11 @@ export const PROFESSIONALPROJECTS = [
       imgFolder+'player.png',
       vidFolder+'player.mp4',
       'media-player-project',
-      'HTML5 Media Element | Blob Storage ',
-      `Envision changed thier screen capture from a proprietary video format to MP4, allowing for new 
-      video processing and MP4 delivery through the browser.
-      This video is a staged demo of an agent interaction featuring the newly implemented capture-to-play pipeline.
-      I created the new 'HTML5 Player' demonstrated in the video.
-      Challanges included cross-browser support for I.E. and an interactive waveform that supports over 20,000 points.`,
+      'HTML5 Media | Blob Storage ',
+      `Envision changed their screen capture from a proprietary video format to MP4 allowing for new video processing and MP4 delivery through the browser. 
+      This video is a staged demo of an agent interaction featuring the newly implemented capture-to-play pipeline. 
+      I created the new 'HTML5 Player' demonstrated in the video. 
+      The biggest challenged was an interactive waveform that supports over 20,000 points.`,
       [
         new TimeStamps(21, 'HTML5 Player windows opened'),
         new TimeStamps(31, 'Adding a mark'),
@@ -28,10 +27,11 @@ export const PROFESSIONALPROJECTS = [
       vidFolder+'browserphone.mp4',
       'browser-phone-project',
       'WebRTC | Twilio Integration | International Calling',
-      `The sales team requested a demo phone for introducing new customers to the product. 
-      This video is a staged demonstration of a call to my cell phone.  What you can't see is the desktop 
-      screen capture starting, pausing, and the adding call capture tags.  The end result is an uplaoded recording with audio, screen, and call data.
-      The project included setting up a TwiML App to place the call, error and call reporting, and an interface for adding the phone to organizations and agents.`,
+      `Envision’s sales team requested a ‘demo phone’ for introducing new customers to the Click2Coach product. 
+      This video demonstrates calling my cell phone from the browser.  Behind the scenes desktop 
+      screen capture is started, paused, and ended as call data is captured. 
+      The project included setting up a TwiML App to place the call, error and call reporting, and interfaces for managing the phone's use.
+      `,
       [
         new TimeStamps(8, 'Call placed'),
         new TimeStamps(15, 'Adding data tags'),
@@ -44,12 +44,12 @@ export const PROFESSIONALPROJECTS = [
       imgFolder+'annotation.png',
       vidFolder+'annotation.mp4',
       'annotation-project',
-      'Browser API | Async Restful Api | Page Redrawing',
-      `A feature of the product is a supervisor sending back a review to an agent as an audio annotations appended to original media.  
-      This video demonstrates the client side work of
-      processing the audio in real time with the AudioContext API, collecting then graphing a set of points on a canvas, and sending the audio to
-      the server as a blob.  The majority of the work, which I assisted in, wat the creation of a media service api in the cloud that appends
-      the annotation to other media.  The biggest front-end challange was triggering the browser to redraw only part of the page.`,
+      'Browser APIs | Async Restful Api | Page Redrawing',
+      `On the click2coach website, supervisor may add an audio annotation appended to original media as part of an agent’s review. 
+      This video demonstrates processing the audio in real time with the AudioContext API, collecting and graphing a set of points on a canvas, and sending the audio to the server as a blob.  
+      I also assisted in the creation of a media service api i that appends the annotation to the original media.   
+      The biggest front-end challenge was triggering the browser to redraw only part of the page. 
+      `,
       [
         new TimeStamps(13, 'Recording started'),
         new TimeStamps(15, 'Live audio processing'),
