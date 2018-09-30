@@ -47,10 +47,23 @@ h1.title {
     content:' Set up mic first'
 }
 
-.showEmail {
+.show-email, .show-phone-message {
     margin-top: 20px;
     text-align: center;
     height: 20px;
+}
+
+.show-phone-message span {
+    transition: opacity .8s linear;
+}
+
+.show-phone-message .hide {
+    opacity: 0;
+    
+}
+
+.show-phone-message .show {
+    opacity: 1;
 }
 
 

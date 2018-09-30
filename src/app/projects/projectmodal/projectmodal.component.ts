@@ -11,6 +11,7 @@ export class ProjectmodalComponent implements OnInit {
   @ViewChild('videoPlayer') set videoRef (videoRef: ElementRef) {
     this.video = videoRef.nativeElement;
   }
+  
   @ViewChild('videoSlider') set sliderRef (sliderRef: ElementRef) {
     this.slider = sliderRef.nativeElement;
   }

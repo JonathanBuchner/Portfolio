@@ -26,7 +26,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "https://media.twiliocdn.com/sdk/js/client/v1.4/twilio.min.js"
+              "src/libs/twilio.min.js"
             ]
           },
           "configurations": {
