@@ -1,12 +1,12 @@
 {
   "name": "portfolio-project",
   "version": "1.0.0",
-  "engines" : { 
-    "node" : "8.11.1" 
+  "engines": {
+    "node": "8.11.1"
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng build --prod",
+    "start": "npm install && ng build --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
