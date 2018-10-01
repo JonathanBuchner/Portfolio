@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, HostListener, Output, EventEmitter } from '@angular/core';
 import { VideoProjectmodalDirective } from '../../directives/video-projectmodal.directive';
 import { Project } from '../../models/Project';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-projectmodal',
@@ -11,7 +12,6 @@ export class ProjectmodalComponent implements OnInit {
   @ViewChild('videoPlayer') set videoRef (videoRef: ElementRef) {
     this.video = videoRef.nativeElement;
   }
-  
   @ViewChild('videoSlider') set sliderRef (sliderRef: ElementRef) {
     this.slider = sliderRef.nativeElement;
   }
@@ -31,6 +31,7 @@ export class ProjectmodalComponent implements OnInit {
   hover: HTMLElement;
   duration: number;
   currentTime: number = 0;
+  hovertime: number = 0;
   devmode = false;
   
   constructor() {}
@@ -46,19 +47,30 @@ export class ProjectmodalComponent implements OnInit {
   //close
   closeModal() {
     this.close.emit(false);
-    console.log('close');
   }
 
   //slider change time
   updateTime(time: number): void {
      this.video.currentTime = time;
      this.currentTime = time;
-     this.moveHover();
   }
 
-  moveHover() {
-    let moveDistance = Math.floor(this.currentTime * 300 / this.duration);
-    this.hover.style.left =  moveDistance.toString()+'px';
+  mousemove($event) {
+    let mouseXPos = $event.x;
+    let eleXPos = this.slider.getBoundingClientRect().left;
+    let offset = this.fixMouseOffset(mouseXPos - eleXPos);
+    this.hovertime = Math.floor(offset * this.duration / 315);
+    this.hover.style.left = offset.toString()+'px';
+  }
+
+  fixMouseOffset(offset: number) {
+    if (offset < 0) {
+      return 0;
+    } else if ( offset > 315) {
+      return 315;
+    } else {
+      return offset;
+    }
   }
 
   //Play or Pause
@@ -94,7 +106,6 @@ export class ProjectmodalComponent implements OnInit {
   addEventListenerTimeupdate() {
     this.video.addEventListener('timeupdate', () => {
       if (this.updateSlider) this.currentTime = this.video.currentTime;
-      this.moveHover();
     });
   }
 }
