@@ -80,3 +80,17 @@ nav a.active::before {
     content: "\f105";
 }
 
+@media only screen and (max-width: 600px) {
+    
+    .navigation {
+        background: black;
+        border-color: white;
+    }
+    nav {
+        
+    }
+    nav a {
+        display: block;
+    }
+} 
+

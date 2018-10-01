@@ -88,5 +88,17 @@ h1.title {
     opacity: 1;
 }
 
+@media (max-width: 600px) {
+    .btn {
+        position: relative;
+        display: block;
+        margin: 30px 0 0;
+        width: 150px;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 
 

@@ -18,14 +18,14 @@ p {
 
 .project-container img {
     width: 250px;
-    height: 140px;;
+    height: 140px;
 }
 
 @media (max-width: 950px) {
     .project-container > div {
         width: calc(100% - 40px);
         margin: 0 0 20px 0; /* For stacking */
-        padding: 0 20px 20px 20px;
+        padding: 5px 20px;
     }
 
     .project-container .project {
@@ -35,5 +35,6 @@ p {
     .project-container img {
         max-width: 500px;
         width: 100%;
+        height: 100%;
     }
 }

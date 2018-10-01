@@ -52,7 +52,7 @@
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 750px) {
     .container {
         top: 10px;
         transform: translateX(-50%);

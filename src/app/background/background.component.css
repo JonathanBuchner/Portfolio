@@ -1,5 +1,4 @@
 .background-container > div {
-    width: 810px;
 }
 
 .grid {
@@ -26,4 +25,23 @@ p {
 
 img {
     width: 100%;
+}
+
+@media (max-width: 950px) {
+    .grid {
+        display: block;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+
+    .img {
+        top: 0;
+        transform: translateY(0);
+    }
+
+    img {
+        width: 200px;
+        margin-bottom: 30px;
+    }
 }
