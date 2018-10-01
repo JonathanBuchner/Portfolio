@@ -36,11 +36,12 @@
 
 @media (max-width: 1390px) {
     .container {
-        width: 80vw;
+        width: 100%;
         max-width: 556px;;
     }
     .grid {
         display: grid;
+        margin-bottom: 30px;
         grid-template-areas: 
             'title'
             'video'
@@ -177,6 +178,7 @@ div.title {
 }
 
 .close, .currentTime {
+    margin-bottom: 30px;
     padding: 2px 8px;
     border-bottom: transparent solid 1px;
     font-family: Segoe UI,SegoeUI,"Helvetica Neue", Helvetica, Arial, sans-serif;

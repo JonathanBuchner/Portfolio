@@ -89,6 +89,11 @@ h1.title {
 }
 
 @media (max-width: 600px) {
+    .black-background {
+        padding: 5px 10px 40px 10px;
+        width: calc(100% - 20px);
+    }
+    
     .btn {
         position: relative;
         display: block;

@@ -15,8 +15,12 @@ export class VideoBackgroundDirective implements OnInit {
 
     router.events.pipe(filter(e => e instanceof NavigationStart)).subscribe(event => {
       clearTimeout(this.timeout);
-      this.video.pause();
-      this.video.play();
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // mobile!
+      } else {
+        this.video.pause();
+        this.video.play();
+      } 
     });
   }
 
