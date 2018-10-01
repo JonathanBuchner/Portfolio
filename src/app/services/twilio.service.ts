@@ -33,7 +33,7 @@ export class TwilioService {
     Twilio.Device.setup(data.token);
 
     Twilio.Device.ready( (device) => {
-      this.log('Ready!');
+      this.log('Ready! Set up your mic.');
     });
 
     Twilio.Device.error((error) => {
@@ -41,7 +41,7 @@ export class TwilioService {
     });
 
     Twilio.Device.connect( (conn) => {
-      this.log('Call established.');
+      this.log('Call established. You should hear ringing.');
       this.inProgress.next(true);
       this.inprogress = true;
     });

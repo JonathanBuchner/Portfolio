@@ -5,7 +5,7 @@ import { ContactComponent } from "../contact/contact.component";
 import { PagenotfoundComponent } from "../pagenotfound/pagenotfound.component";
 
 export const ROUTES: Routes = [
-    {path: 'Projects', component:ProjectsComponent },
+    {path: '', component:ProjectsComponent },
     {path: 'Background', component:BackgroundComponent },
     {path: 'Contact', component:ContactComponent },
     {path: '**', component:PagenotfoundComponent },

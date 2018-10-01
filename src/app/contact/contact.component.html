@@ -2,14 +2,20 @@
     <div class="black-background">
         <h1 class="title">Thank you for visiting</h1>
         <div class="btn-container">
-            <span class="btn" (mouseover)="showMePhoneMessage(true)" (mouseleave)="showMePhoneMessage(false)" (click)="call()"><i class="fas fa-phone-square"></i><span class="phone"></span></span>
+            <span class="btn"
+            [class]=" inProgress ? 'btn red' : 'btn blue' " 
+            (mouseover)="showMePhoneMessage(true)" 
+            (mouseleave)="showMePhoneMessage(false)"
+            (click)="call()">
+            
+            <i class="fas fa-phone-square"></i><span  [class]="inProgress ? 'in-progress phone' : 'no-progress phone' "></span></span>
             <span class="btn" (click)="showMeEmail()"><i class="fas fa-envelope"></i> Show Email</span>
         </div>
         <div class="show-email"> 
             <span *ngIf="showEmail">me@jonathanbuchner.com</span>
         </div>
         <div class="show-phone-message">
-            <span [class]="showPhoneMessage || inProgress ? 'show' : 'hide' " [innerHtml]="status">What</span>
+            <span [class]="showPhoneMessage || inProgress ? 'show' : 'hide' " [innerHtml]="status">Error</span>
         </div>
     </div>
 </div>

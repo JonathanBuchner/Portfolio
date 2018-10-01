@@ -38,14 +38,36 @@ h1.title {
     background-color: rgb(30, 60, 170);
 }
 
+/* Red button */
+.btn.red {
+    background-color: rgb(175, 0, 0);
+}
+
+.btn.red:hover {
+    background-color: rgb(175, 25, 25);
+}
+
+.btn.red:active {
+    background-color: rgb(175, 15, 15);
+}
+
 /* Hover Effect */
-.phone::after {
+.phone.no-progress::after {
     content: ' Call my cell';
 }
 
-.phone:hover::after {
+.phone.no-progress:hover::after {
     content:' Set up mic first'
 }
+
+.phone.in-progress::after {
+    content: ' End';
+}
+
+.phone.in-progress:hover::after {
+    content:' End'
+}
+
 
 .show-email, .show-phone-message {
     margin-top: 20px;
