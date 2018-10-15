@@ -2,7 +2,7 @@ import { Project } from "../models/Project";
 import { TimeStamps } from "../models/TimeStamps";
 
 const imgFolder = '../../assets/img/';
-const vidFolder = '../../assets/vid/';
+const vidFolder = 'https://buchner.z5.web.core.windows.net/assets/vid/';
 
 export const PROFESSIONALPROJECTS = [
     new Project(
